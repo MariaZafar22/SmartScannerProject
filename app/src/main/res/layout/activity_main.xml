@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Smart AI Document Scanner"
+            android:text="Smart Scanner AI PRO"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="#212121"
@@ -23,25 +23,44 @@
         <androidx.camera.view.PreviewView
             android:id="@+id/previewView"
             android:layout_width="match_parent"
-            android:layout_height="320dp"
+            android:layout_height="340dp"
             android:background="#000000"
             android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/btnCapture"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="📸 Capture Document"
+            android:layout_height="60dp"
+            android:text="📸 Capture &amp; Auto-Scan"
             android:backgroundTint="#3F51B5"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"/>
 
-        <Button
-            android:id="@+id/btnScan"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="🧠 Extract Text (AI OCR)"
-            android:backgroundTint="#009688"
-            android:layout_marginBottom="15dp"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btnListen"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="🔊 Listen"
+                android:backgroundTint="#FF9800"
+                android:layout_marginEnd="5dp"/>
+
+            <Button
+                android:id="@+id/btnScan"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="🌐 Translate"
+                android:backgroundTint="#9C27B0"
+                android:layout_marginStart="5dp"/>
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -58,7 +77,7 @@
             android:gravity="top"
             android:padding="12dp"
             android:background="#FFFFFF"
-            android:hint="Captured text will appear here..."
+            android:hint="Scanned text will appear here..."
             android:textColor="#424242"
             android:textSize="16sp"
             android:scrollbars="vertical"
